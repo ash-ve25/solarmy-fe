@@ -1,0 +1,3 @@
+mutation GenerateSignInCode($input: GenerateSignInCodeInput!) {
+    generateSignInCode(input: $input)
+}

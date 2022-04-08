@@ -1,0 +1,1 @@
+export {historyAuthMiddleware} from './historyAuthMiddleware';

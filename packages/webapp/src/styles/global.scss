@@ -1,0 +1,98 @@
+html, body {
+  height: 100%;
+}
+
+#app {
+  min-height: 100%;
+  display: flex;
+  align-items: stretch;
+  background: url('../../public/dashboard/dashboard.png') no-repeat center center;
+  background-size: cover;
+  background-color: $main-color;
+
+  .app-layer {
+    width: 100%;
+  
+    .ant-layout-content {
+      padding: 1rem !important;
+      text-align: center;
+      background: transparent;
+    }
+  }
+
+  .ant-layout {
+    background: transparent;
+    height: 100%;
+  }
+
+  .site-layout {
+    padding: 0 $site-layout-margin;
+    background-color: $white;
+
+    &:before {
+      content: "";
+      height: 75px;
+      margin: 0 (-$site-layout-margin);
+      background-color: $main-color;
+    }
+
+    .ant-page-header {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .ant-tabs-nav {
+    .ant-tabs-nav-wrap {
+      padding: 8px 16px;
+    }
+
+    .ant-tabs-extra-content {
+      padding: 8px 16px;
+    }
+  }
+
+  h3 {
+    color: $gray-scale-color-700;
+  }
+
+  .button-holder {
+    width: 100%;
+    text-align: right;
+
+    .ant-btn {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+
+  .ant-select-selector, .ant-picker, .ant-input:not(textarea) {
+    border: none;
+    border-bottom: 1px solid #A0AABB;
+
+    &:hover {
+      border-bottom: 1px solid #0096D6;
+    }
+  }
+
+  .ant-select-selector, .ant-picker, .ant-input {
+    box-shadow: none;
+  }
+
+  .reset-style-button {
+    color: #fff !important;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:hover::after, &:after {
+      border-bottom: none !important;
+    }
+
+    &:active {
+      background: transparent !important;
+    }
+  }
+
+}

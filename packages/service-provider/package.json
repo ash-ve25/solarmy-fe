@@ -1,0 +1,60 @@
+{
+  "name": "@solar/service-provider",
+  "version": "1.0.0",
+  "description": "",
+  "license": "",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16.13.0"
+  },
+  "engineStrict": true,
+  "scripts": {
+    "build": "rm -rf ./dist && tsc --declaration"
+  },
+  "devDependencies": {
+    "@types/jest": "27.0.3",
+    "jest": "27.4.3",
+    "ts-node": "10.4.0",
+    "@nestjs/common": "8.2.3",
+    "@nestjs/core": "8.2.3",
+    "@nestjs/microservices": "8.2.3",
+    "@nestjs/platform-express": "8.2.3",
+    "typescript": "4.5.2",
+    "@nestjs/cqrs": "8.0.0",
+    "@nestjs/terminus": "9.0.0-next.0",
+    "@nestjs/graphql": "9.1.1",
+    "typeorm": "0.2.40",
+    "amqp-connection-manager": "3.7.0",
+    "amqplib": "0.8.0",
+    "class-transformer": "0.4.0",
+    "class-validator": "0.13.1",
+    "dotenv": "10.0.0",
+    "lodash": "4.17.21",
+    "optional-js": "2.3.0",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "7.4.0",
+    "nestjs-typeorm-paginate": "3.1.3"
+  },
+
+  "peerDependencies": {
+    "@nestjs/common": "*",
+    "@nestjs/core": "*",
+    "@nestjs/cqrs": "*",
+    "@nestjs/microservices": "*",
+    "@nestjs/platform-express": "*",
+    "@nestjs/terminus": "*",
+    "@nestjs/graphql": "*",
+    "typeorm": "*",
+    "amqp-connection-manager": "*",
+    "amqplib": "*",
+    "class-transformer": "*",
+    "class-validator": "*",
+    "dotenv": "*",
+    "lodash": "*",
+    "reflect-metadata": "*",
+    "rxjs": "*"
+  }
+}

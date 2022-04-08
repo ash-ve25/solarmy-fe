@@ -1,0 +1,10 @@
+query DeployedUnits {
+    deployedUnits {
+        id
+        status
+        reward
+        time
+        releaseAt
+        createdAt
+    }
+}

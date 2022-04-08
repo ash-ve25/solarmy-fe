@@ -1,0 +1,88 @@
+.ant-layout-footer {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem !important;
+  text-align: center;
+  background: transparent !important;
+
+  .ant-menu {
+    justify-content: center;
+    color: $white;
+    padding: 0px 24px;
+    border: none;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(34px);
+    border-radius: 24px;
+    height: 80px;
+    width: 1150px;
+    background-image: url('../../public/icons/soldiers-icon-footer.svg');
+    background-size: 3rem;
+    background-position: 1.5rem center;
+    background-repeat: no-repeat;
+    align-items: center;
+
+    .ant-menu-item {
+      padding: 0 1.3rem;
+      min-width: 6.5rem;
+
+      &.logo {
+        margin-left: auto;
+      }
+
+      a {
+        font-weight: 600;
+        font-size: 12px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.06);
+        display: block;
+        line-height: 1.5rem;
+
+        &:hover, &.active {
+          color: #fff;
+
+          .icon {
+            background-color: rgba(31, 31, 31, 0.5);
+            border-radius: 20px;
+            width: 60px;
+            height: 32px;
+            margin: 0 auto;
+          }
+        }
+
+        .icon {
+          display: block;
+          height: 2rem;
+          width: 100%;
+        }
+
+        .dashboard-icon {
+          background: url('../../public/icons/Vector-dashboard-footer-icon.svg') no-repeat center center;
+          background-size: 1.2rem;
+        }
+
+        .battalion-icon {
+          background: url('../../public/icons/MilitaryTechTwoTone.svg') no-repeat center center;
+          background-size: 1.6rem;
+        }
+
+        .deploy-icon {
+          background: url('../../public/icons/AltRouteTwoTone.svg') no-repeat center center;
+          background-size: 1.6rem;
+        }
+      }
+
+      &.disconnect-btn {
+        margin-left: auto;
+        font-size: 15px;
+
+        .disconnect-btn-icon {
+          background: url('../../public/icons/Vector-connected-footer-icon.svg') no-repeat 0.5rem center;
+          background-size: 1.4rem;
+          padding-left: 2.5rem;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

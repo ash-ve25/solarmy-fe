@@ -1,0 +1,11 @@
+query Battalion {
+    battalion {
+        id
+        is3d
+        isMint
+        points
+        rank
+        address
+        dataUri
+    }
+}

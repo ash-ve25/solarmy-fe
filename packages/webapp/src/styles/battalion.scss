@@ -1,0 +1,192 @@
+.battalion {
+  height: 100%;
+
+  .battalion-unit-card-list {
+    background: transparent;
+
+    .ant-card-body {
+      padding: 0;
+
+      .ant-tabs {
+        background-color: transparent;
+        color: $white;
+  
+        .ant-tabs-nav {
+          background-color: #1F1F1F !important;
+          border-radius: 100px;
+          height: 48px;
+  
+          &::before {
+            border-bottom: none;
+          }
+  
+          .ant-tabs-nav-list {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+  
+            .ant-tabs-tab {
+              margin: 0 !important;
+              text-align: center;
+              align-items: center;
+              display: flex;
+              justify-content: center;
+              font-weight: 600;
+              font-size: 15px;
+              flex: auto;
+  
+              &-active {
+                background: rgba(255, 255, 255, 0.16);
+                border-radius: 16px;
+                margin: 0 !important;
+                height: 32px;
+                color: #fff;
+  
+                .ant-tabs-tab-btn {
+                  color: #fff;
+                }
+              }
+  
+              &:hover {
+                color: #fff;
+              }
+            }
+  
+            .ant-tabs-ink-bar-animated {
+              display: none;
+            }
+          }
+        }
+  
+        .ant-tabs-content {
+          .ant-tabs-tabpane {
+            display: flex;
+            flex-wrap: wrap;
+  
+            .battalion-unit-preview {
+              border-radius: 16px;
+              overflow: hidden;
+              flex: auto;
+              margin: 0.1rem;
+              height: 88px;
+              background: #1F1F1F;
+              border-radius: 100px;
+              width: 100%;
+              cursor: pointer;
+
+              .loader-wrapper {
+                margin-left: 1rem;
+              }
+
+              &:hover {
+                background: rgba(255, 255, 255, 0.16);
+              }
+
+              div {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 2rem;
+
+                .unit-image {
+                  padding-left: 0.15rem;
+  
+                  img {
+                    width: 80px;
+                    border-radius: 100%;
+                  }
+                }
+
+                span {
+                  font-size: 15px;
+                  color: rgba(255, 255, 255, 0.6);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .battalion-unit-card {
+    background: #292929;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4), inset 0px 1px 0px #383838;
+    border-radius: 24px;
+
+    .battalion-unit {
+
+      .unit-data {
+        background: #383838;
+        border-radius: 16px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-weight: 500;
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.6);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .unit-data-item {
+          p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            &.unit-id {
+              font-weight: 600;
+              font-size: 24px;
+              color: #FFFFFF;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              span {
+                font-weight: 600;
+                font-size: 12px;
+              }
+            }
+          }
+
+          .attribute-score {
+            height: 48px;
+            background: #0059F7;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 15px;
+            color: #fff;
+            line-height: 49px;
+            text-align: left;
+            padding: 0 24px;
+          }
+
+          .unit-item-link {
+            border: 1px solid rgba(255, 255, 255, 0.34);
+            box-sizing: border-box;
+            border-radius: 1000px;
+            margin-top: 0.3rem;
+            display: block;
+            height: 48px;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 49px;
+            text-align: left;
+            padding: 0 24px;
+            color: #fff;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.16);
+            }
+          }
+        }
+      }
+    }
+  }
+}

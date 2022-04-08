@@ -1,0 +1,104 @@
+type Query {
+    _: String
+
+    battalion: [Unit]
+    unit(id: UUID): Unit
+    unitRarity(id: String): UnitRarity
+
+    accountProfile: AccountProfile
+
+    deployedUnits: [DeployedUnit]
+}
+
+type Mutation {
+    signIn(input: SignInInput): TokenPair
+    generateSignInCode(input: GenerateSignInCodeInput): String
+    changeUsername(input: ChangeAccountUsernameInput): AccountProfile
+    deployUnit(input: DeployUnitInput): DeployedUnit
+    claimDeployedUnit(unitId: String): DeployedUnit
+    delistUnit(unitId: String): DeployedUnit
+
+    # remove it in the future, it is for development
+    createTransaction(input: CreateTransactionInput): Transaction
+    collectUnits(input: String): String
+    collectRarity: String
+    createUnit(input: CreateUnitInput): Unit
+    #-------
+}
+
+input DeployUnitInput {
+    unitId: String
+    time: Int
+}
+
+input CreateUnitInput {
+    name: String
+}
+
+# temp solution for quick development
+input CreateTransactionInput {
+    from: String
+    to: String
+}
+#------
+
+input SignInInput {
+    username: String
+    signature: String
+}
+
+input GenerateSignInCodeInput {
+    username: String
+}
+
+input ChangeAccountUsernameInput {
+    username: String
+}
+
+type Unit {
+    id: ID
+    name: String
+    address: String
+    isMint: Boolean
+    is3d: Boolean
+    points: Int
+    rank: Int
+    dataUri: String
+    createdAt: DateTime
+    updatedAt: DateTime
+}
+
+type UnitRarity {
+    id: ID
+    is2d: Boolean
+    data: JSONObject
+    createdAt: DateTime
+    updatedAt: DateTime
+}
+
+type TokenPair {
+    accessToken: String
+}
+
+type Transaction {
+    id: ID
+}
+
+type AccountProfile {
+    username: String
+}
+
+type DeployedUnit {
+    id: ID
+    status: String
+    time: Int
+    reward: Int
+    releaseAt: DateTime
+    createdAt: DateTime
+}
+
+scalar DateTime
+scalar JSON
+scalar JSONObject
+scalar UUID
+scalar Object

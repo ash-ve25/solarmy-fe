@@ -1,0 +1,5 @@
+mutation ClaimDeployedUnit($unitId: String) {
+    claimDeployedUnit(unitId: $unitId) {
+        id
+    }
+}

@@ -1,0 +1,5 @@
+mutation DeployUnit($input: DeployUnitInput!) {
+    deployUnit(input: $input) {
+        id
+    }
+}

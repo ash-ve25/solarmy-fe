@@ -1,0 +1,5 @@
+mutation ChangeUsername($input: ChangeAccountUsernameInput!) {
+    changeUsername(input: $input) {
+        username
+    }
+}

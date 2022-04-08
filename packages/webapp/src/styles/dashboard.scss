@@ -1,0 +1,126 @@
+.dashboard {
+  height: 100%;
+
+  .ant-card {
+    background: #292929;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4), inset 0px 1px 0px #383838;
+    border-radius: 24px;
+    color: #fff;
+    text-align: left;
+
+    .ant-card-head {
+      color: $white;
+      border-bottom: none;
+
+      .ant-card-head-title {
+        font-weight: 500;
+        font-size: 17px;
+        text-align: left;
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+
+    .ant-card-body {
+      padding-top: 0;
+    }
+
+    .ant-tabs {
+      background-color: transparent;
+      color: $white;
+
+      .ant-tabs-nav {
+        background-color: transparent;
+        background: #1F1F1F;
+        border-radius: 100px;
+        height: 48px;
+
+        &::before {
+          border-bottom: none;
+        }
+
+        .ant-tabs-nav-list {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          .ant-tabs-tab {
+            margin: 0 !important;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 15px;
+            flex: auto;
+
+            &-active {
+              background: rgba(255, 255, 255, 0.16);
+              border-radius: 16px;
+              margin: 0 !important;
+              height: 32px;
+              color: #fff;
+
+              .ant-tabs-tab-btn {
+                color: #fff;
+              }
+            }
+
+            &:hover {
+              color: #fff;
+            }
+          }
+
+          .ant-tabs-ink-bar-animated {
+            display: none;
+          }
+        }
+      }
+
+      .ant-tabs-content {
+        .ant-tabs-tabpane {
+          display: flex;
+          flex-wrap: wrap;
+
+          .dashboard-unit-preview {
+            border-radius: 16px;
+            overflow: hidden;
+            flex: auto;
+            max-width: 49%;
+            margin: 0.1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .dashboard-battalion {
+  }
+}
+
+.dashboard-unit-preview {
+  cursor: pointer;
+  height: 259px;
+
+  &-content {
+    display: none;
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  &:hover {
+    .dashboard-unit-preview-content {
+      display: block;
+    }
+
+    img {
+      display: none;
+    }
+  }
+}

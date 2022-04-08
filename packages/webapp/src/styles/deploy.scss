@@ -1,0 +1,404 @@
+.deploy {
+  height: 100%;
+
+  .deploy-unit-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: #292929;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4), inset 0px 1px 0px #383838;
+    border-radius: 24px;
+
+    .deploy-info-number {
+      font-weight: 500;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.6);
+
+      .deploy-icon {
+        background: url('../../public/icons/Vector-deploy-icon.svg') no-repeat left center;
+        background-size: cover;
+        height: 50px;
+        width: 45px;
+      }
+
+      .title {
+        margin: 0 1.5rem;
+      }
+
+      .number {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #FFFFFF;
+      }
+    }
+
+    .marketplace-button {
+      margin-left: auto;
+      margin-right: 0.2rem;
+
+      a {
+        border-radius: 100px;
+        font-weight: 500;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        padding: 1rem 1.5rem;
+
+        span {
+          background: url('../../public/icons/Vector-marketplace-icon.svg') no-repeat center center;
+          background-size: cover;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-left: 2rem;
+        }
+  
+        &:hover {
+          background: rgba(255, 255, 255, 0.16);
+          
+        }
+      }
+    }
+
+    .deploy-unit-list-info-view-swticher {
+      padding: 4px;
+      width: 400px;
+      height: 40px;
+      background: #1F1F1F;
+      border-radius: 100px;
+
+      button {
+        padding: 4px;
+        width: 196px;
+        height: 32px;
+        border-radius: 16px;
+        background: transparent;
+        border: none;
+        font-weight: 600;
+        font-size: 15px;
+        color: #fff;
+        cursor: pointer;
+
+        &:not(.active) {
+          pointer-events: none; // temp
+        }
+
+        &.active {
+          background: rgba(255, 255, 255, 0.16);
+        }
+      }
+    }
+  }
+
+  .deploy-unit-list {
+    margin-top: 1.5rem;
+
+    .deploy-unit-list-card-item {
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 16px;
+      background: #292929;
+      box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4), inset 0px 1px 0px #383838;
+      border-radius: 24px;
+      height: 196px;
+      // overflow: hidden;
+
+      .ant-card-body {
+        padding: 0;
+      }
+
+      .deploy-unit-list-item {
+        display: flex;
+
+        .deploy-unit-list-item-content {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          .unit-image {
+            img {
+              width: 164px;
+              max-width: 164px;
+              height: auto;
+            }
+          }
+
+          .deploy-unit-list-item-content-data {
+            display: flex;
+            width: 100%;
+            padding-left: 2rem;
+            justify-content: space-between;
+
+            &.is-deploy {
+              flex-direction: column;
+            }
+
+            >div {
+              padding-right: 2rem;
+              text-align: left;
+              width: 100%;
+    
+              .deploy-unit-list-item-content-info {
+                font-weight: 600;
+                font-size: 20px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+
+                .mission {
+                  background: rgba(255, 255, 255, 0.16);
+                  border-radius: 100px;
+                  font-weight: 500;
+                  font-size: 15px;
+                  margin-left: 1rem;
+                  display: flex;
+                  align-items: center;
+                  padding: 0.3rem 1.5rem 0.3rem 0.3rem;
+
+                  &.active {
+                    span {
+                      background: url('../../public/icons/mission-icon.svg') no-repeat center center;
+                      background-size: cover;
+                      height: 28px;
+                      width: 28px;
+                      display: inline-block;
+                      margin-right: 1.5rem;
+                    }
+                  }
+
+                  &.reserve {
+                    span {
+                      background: url('../../public/icons/reserve-mission-icon.svg') no-repeat center center;
+                      background-size: cover;
+                      height: 28px;
+                      width: 28px;
+                      display: inline-block;
+                      margin-right: 1.5rem;
+                    }
+                  }
+                }
+              }
+
+              .deploy-unit-list-item-content-progress {
+
+                p {
+                  margin-bottom: 0.1rem;
+                }
+
+                .days {
+                  font-weight: 500;
+                  font-size: 20px;
+                  color: rgba(255, 255, 255, 0.6);
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+
+                  span {
+                    font-weight: bold;
+                    font-size: 34px;
+                    color: #fff;
+                  }
+                }
+
+                .deploy-unit-list-item-content-progress-bar {
+                  height: 12px;
+                  background: rgba(255, 255, 255, 0.34);
+                  border-radius: 4px;
+                  margin-bottom: 0.5rem;
+                  overflow: hidden;
+
+                  span {
+                    background: #fff;
+                    display: block;
+                    height: 100%;
+                    transition: 1s ease-in;
+                  }
+                }
+
+                .rewards {
+                  font-weight: 500;
+                  font-size: 15px;
+                  color: rgba(255, 255, 255, 0.6);
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+
+                  span {
+                    font-size: 15px;
+                    color: #fff;
+                  }
+                }
+
+                .result {
+                  font-weight: 500;
+                  font-size: 15px;
+                  color: rgba(255, 255, 255, 0.6);
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+
+                  span {
+                    font-size: 15px;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+
+            .delist-btn {
+              padding: 12px 24px;
+              width: 116px;
+              height: 164px;
+              border: 1px solid rgba(255, 255, 255, 0.34);
+              box-sizing: border-box;
+              border-radius: 100px;
+              background: transparent;
+              font-weight: 600;
+              font-size: 15px;
+              color: #fff;
+              cursor: pointer;
+
+              &:hover {
+                background: rgba(255, 255, 255, 0.16); 
+              }
+            }
+
+            .claim-btn {
+              padding: 12px 24px;
+              width: 116px;
+              height: 164px;
+              border: none;
+              box-sizing: border-box;
+              border-radius: 100px;
+              background: #4AF497;
+              font-weight: 600;
+              font-size: 15px;
+              cursor: pointer;
+              color: #292929;
+
+              &:hover {
+                box-shadow: 0 0 15px #4AF497;
+              }
+            }
+
+            .deploy-unit-list-item-content-action {
+              margin-top: 0.4rem;
+
+              .deploy-btn {
+                border: 1px solid rgba(255, 255, 255, 0.34);
+                border-radius: 100px;
+                width: 100%;
+                background: transparent;
+                font-weight: 600;
+                font-size: 15px;
+                color: #fff;
+                cursor: pointer;
+                padding: 3rem;
+
+                &:hover {
+                  background: rgba(255, 255, 255, 0.16); 
+                }
+              }
+            }
+          }
+
+          .deploy-unit-list-item-content-deploy-days {
+
+            .title {
+              font-weight: 500;
+              font-size: 20px;
+              color: #FFFFFF;
+              margin-bottom: 0.8rem;
+            }
+
+            .deploy-days {
+              background: #1F1F1F;
+              border-radius: 150px;
+              display: flex;
+              justify-content: start;
+
+              >div {
+                border: 6px solid #1F1F1F;
+                height: 72px;
+                width: 72px;
+                line-height: 62px;
+                border-radius: 100%;
+                font-weight: 600;
+                font-size: 15px;
+                text-transform: uppercase;
+                color: #fff;
+                cursor: pointer;
+                text-align: center;
+
+                &:hover, &.active {
+                  background: #FFFFFF;
+                  color: #1F1F1F;
+                }
+              }
+            }
+          }
+
+          .bonus {
+            font-weight: 500;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: left;
+            margin-bottom: 0;
+
+            span {
+              font-weight: 500;
+              font-size: 20px;
+              color: #FFFFFF;
+            }
+          }
+
+          .proceed-deploy {
+            margin-top: 1rem;
+            height: 60px;
+
+            button {
+              cursor: pointer;
+              width: 226px;
+              height: 56px;
+              border-radius: 16px;
+              color: #FFFFFF;
+              font-weight: 600;
+              font-size: 20px;
+            }
+
+            .deploy-btn {
+              background: rgba(0, 89, 247, 1);
+              border: none;
+              margin-right: 1rem;
+
+              &:hover {
+                box-shadow: 0 0 15px rgba(0, 89, 247, 1);
+              }
+            }
+
+            .cancel-btn {
+              border: 1px solid rgba(255, 255, 255, 0.34);
+              background-color: transparent;
+
+              &:hover {
+                background: rgba(255, 255, 255, 0.16);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

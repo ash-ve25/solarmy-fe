@@ -1,0 +1,5 @@
+mutation DelistUnit($unitId: String) {
+    delistUnit(unitId: $unitId) {
+        id
+    }
+}

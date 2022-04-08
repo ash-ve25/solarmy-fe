@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "commonjs",
+    "lib": ["es6", "es2019"],
+    "strict": false,
+    "strictFunctionTypes": false,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "baseUrl": "./src/main",
+    "types": ["reflect-metadata", "jest", "node"],
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": false,
+    "suppressExcessPropertyErrors": true
+  },
+
+  "exclude": ["node_modules", "dist", "migrations"]
+}

@@ -1,0 +1,83 @@
+#auth {
+  margin: 0;
+  padding: 3rem;
+  width: 100%;
+  text-align: center;
+  color: $white;
+  font-size: 1.4rem;
+  background-image: url('../../public/login/bg2.png'), url('../../public/login/bg3.png'), url('../../public/login/bg1.png');
+  background-position: center bottom, center bottom, center center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 100% auto, 100% 97%, cover;
+
+  .login-btn {
+    background: url('../../public/icons/login-btn.png'), no-repeat center center;
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+  }
+
+  .title {
+    width: 260px;
+    height: 72px;
+    line-height: 72px;
+    border: none;
+    display: inline-block;
+    margin: 0 auto 2rem;
+    backdrop-filter: blur(34px);
+    border-radius: 24px;
+    font-size: 1.4rem;
+    padding-left: 2rem;
+    font-weight: bold;
+    background: url('../../public//icons/soldiers-icon.png') no-repeat 25% center;
+    background-color: rgba(31, 31, 31, 0.5);
+  }
+
+  .buttons-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 708px;
+    height: 96px;
+    background: rgba(31, 31, 31, 0.5);
+    backdrop-filter: blur(34px);
+    border-radius: 24px;
+
+    .buttons-title {
+      background: url('../../public//icons/DeveloperBoardTwoTone.svg') no-repeat 28% center;
+    }
+
+    .buttons-title, .btn {
+      margin-right: 1rem;
+      flex: auto;
+      font-size: 0.9rem;
+      padding-left: 5rem;
+    }
+
+    .btn {
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 16px;
+      width: 212px;
+      height: 48px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(31, 31, 31, 0.2) !important;
+      }
+
+      &.phantom {
+        background: url('../../public/icons/phantom-logo.svg') no-repeat 7% 50%;
+        background-size: 11%;
+      }
+
+      &.solflare {
+        background: url('../../public/icons/solflare-logo.svg') no-repeat 7% 50%;
+        background-size: 11%;
+        opacity: 0.3;
+        cursor: default;
+      }
+    }
+  }
+}

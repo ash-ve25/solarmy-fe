@@ -1,0 +1,7 @@
+query UnitRarity($id: String) {
+    unitRarity(id: $id) {
+        id
+        is2d
+        data
+    }
+}

@@ -1,0 +1,12 @@
+./node_modules
+.env
+.env.example
+yarn-error.log
+./dist
+.jwt.key
+pushContainer.sh
+buildContainer.sh
+readme.md
+search-app.iml
+.dockerignore
+dist
